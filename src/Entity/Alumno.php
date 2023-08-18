@@ -13,7 +13,7 @@ class Alumno
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $idAlumno = null;
+    private ?int $id = null;
 
     #[ORM\Column(length: 32)]
     private ?string $nombre = null;
@@ -37,7 +37,7 @@ class Alumno
 
     public function getId(): ?int
     {
-        return $this->idAlumno;
+        return $this->id;
     }
 
     public function getNombre(): ?string
