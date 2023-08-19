@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Curso{% endblock %}
+{% block title %}Cursos{% endblock %}
 
 {% block body %}
-    <h1>Create new Curso</h1>
+    <h1>Registrar Nuevo Curs</h1>
 
     {{ include('curso/_form.html.twig') }}
 
-    <a href="{{ path('app_curso_index') }}">back to list</a>
+    <a href="{{ path('app_curso_index') }}">Volver</a>
 {% endblock %}
