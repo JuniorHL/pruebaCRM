@@ -11,7 +11,7 @@
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Creditos</th>
-                <th>actions</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -21,13 +21,14 @@
                 <td>{{ curso.nombre }}</td>
                 <td>{{ curso.creditos }}</td>
                 <td>
-                    <a href="{{ path('app_curso_show', {'id': curso.id}) }}">show</a>
-                    <a href="{{ path('app_curso_edit', {'id': curso.id}) }}">edit</a>
+                    <a href="{{ path('app_curso_show', {'id': curso.id}) }}">ver</a>
+                    <a href="{{ path('app_curso_edit', {'id': curso.id}) }}">editar</a>
+                    <a href="{{ path('app_curso_delete', {'id': curso.id}) }}">eliminar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">No hay cursos registrados</td>
             </tr>
         {% endfor %}
         </tbody>
