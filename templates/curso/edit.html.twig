@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Curso{% endblock %}
+{% block title %}Editar Curso{% endblock %}
 
 {% block body %}
     <h1>Editar Curso</h1>
 
-    {{ include('curso/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('curso/_form.html.twig', {'button_label': 'Guardar'}) }}
 
     <a href="{{ path('app_curso_index') }}">Volver</a>
 

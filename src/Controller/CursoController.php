@@ -71,11 +71,14 @@ class CursoController extends AbstractController
     #[Route('/{id}', name: 'app_curso_delete', methods: ['POST'])]
     public function delete(Request $request, Curso $curso, EntityManagerInterface $entityManager): Response
     {
+
         if ($this->isCsrfTokenValid('delete'.$curso->getId(), $request->request->get('_token'))) {
+           
             $entityManager->remove($curso);
             $entityManager->flush();
         }
 
         return $this->redirectToRoute('app_curso_index', [], Response::HTTP_SEE_OTHER);
+
     }
 }
