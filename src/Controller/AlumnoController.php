@@ -12,11 +12,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+<<<<<<< HEAD
+=======
+use Psr\Log\LoggerInterface;
+>>>>>>> 1ff12744ef1b0cab71b125761d40b3dfa4d5b6bf
 
 class AlumnoController extends AbstractController
 {
     #[Route('/alumno', name: 'app_alumno')]
+<<<<<<< HEAD
     public function index(Request $request, EntityManagerInterface $entityManager, AlumnoRepository $alumnoRepository, CursoRepository $cursoRepository): Response
+=======
+    public function index(Request $request, EntityManagerInterface $entityManager, AlumnoRepository $alumnoRepository, CursoRepository $cursoRepository, LoggerInterface $logger): Response
+>>>>>>> 1ff12744ef1b0cab71b125761d40b3dfa4d5b6bf
     {
         $alumno = new Alumno();
         $form = $this->createForm(AlumnoType::class,$alumno);
@@ -43,7 +51,10 @@ class AlumnoController extends AbstractController
 
             return $this->redirectToRoute('app_alumno');
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 1ff12744ef1b0cab71b125761d40b3dfa4d5b6bf
         return $this->render('alumno/index.html.twig', [
             'form' => $form,
             'alumnos'=> $alumnoRepository->findAll(),

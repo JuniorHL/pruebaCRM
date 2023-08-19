@@ -21,9 +21,15 @@
                 <td>{{ curso.nombre }}</td>
                 <td>{{ curso.creditos }}</td>
                 <td>
+<<<<<<< HEAD
                     <a href="{{ path('app_curso_show', {'id': curso.id}) }}">Ver</a>
                     <a href="{{ path('app_curso_edit', {'id': curso.id}) }}">Editar</a>
                     <a href="{{ path('app_curso_delete', {'id': curso.id}) }}">Eliminar</a>
+=======
+                    <a href="{{ path('app_curso_show', {'id': curso.id}) }}">ver</a>
+                    <a href="{{ path('app_curso_edit', {'id': curso.id}) }}">editar</a>
+                    <a href="{{ path('app_curso_delete', {'id': curso.id}) }}">eliminar</a>
+>>>>>>> 1ff12744ef1b0cab71b125761d40b3dfa4d5b6bf
                 </td>
             </tr>
         {% else %}
