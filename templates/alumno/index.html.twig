@@ -12,34 +12,9 @@
     <h1>Registro de alumno</h1>
 </div>
 
- {{ form(form) }}
+    {{ form(form) }}
 
-    <h3>Selecciona tus cursos</h3>
-     <table class="table">
-     <thead>
-            <tr>
-                <th>Id</th>
-                <th>Curso</th>
-                <th>Créditos</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for curso in cursos %}
-            <tr>
-                <td>{{ curso.id }}</td>
-                <td>{{ curso.nombre }}</td>
-                <td>{{ curso.creditos }}</td>
-                <td><input type="checkbox" name="cursosSeleccionados[]" value="{{ curso.id }}"></td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">No hay cursos disponibles</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+    
 
     
 {% endblock %}
