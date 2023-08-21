@@ -17,7 +17,7 @@ class LoginType extends AbstractType
             ->add('nombre')
             ->add('dni',PasswordType::class)
             ->add('login',SubmitType::class)
-            ->add('registrarse',SubmitType::class)
+           
         ;
     }
 

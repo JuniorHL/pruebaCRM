@@ -16,11 +16,11 @@ class SeleccioncursoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('idAlumno', HiddenType::class)
+           
             ->add('idCurso', EntityType::class,[
                 'class' => Curso::class,
                 'choice_label' => 'nombre',
-                'multiple' => true,
+                'multiple' => false,
                 'expanded' => true,
 
             ])

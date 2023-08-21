@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Form;
-
+use App\Entity\Curso;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class RegistroType extends AbstractType
 {
@@ -13,7 +14,14 @@ class RegistroType extends AbstractType
     {
         $builder
             ->add('Registroalumno', RegistroalumnoType::class)
-            ->add('Seleccioncursos', SeleccioncursoType::class)
+            //->add('Seleccioncursos', SeleccioncursoType::class)
+            ->add('Seleccioncursos', EntityType::class,[
+                'class' => Curso::class,
+                'choice_label' => 'nombre',
+                'multiple' => true,
+                'expanded' => true,
+
+            ])
             ->add('Registrar', SubmitType::class)
         ;
     }
